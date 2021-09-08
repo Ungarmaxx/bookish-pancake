@@ -1,4 +1,6 @@
-def nth_power(n, power = 2):
+
+def nth_power(n, fn = lambda x: x**2):
+
     '''
     calculates power for number upto n
     args:
@@ -7,6 +9,8 @@ def nth_power(n, power = 2):
         
     '''
     
-    return [i**power for i in range(n)]
+    return [fn(i) for i in range(n)]
+
 
 print(nth_power(10))
+
